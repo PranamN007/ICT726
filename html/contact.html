@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Send your Message Feedbacks</title>
+
+    <!-- linking the favicon -->
+    <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
+
+    <!-- linking with the external css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- linking external cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- making the navigation -->
+    <nav class="navigation">
+        <div class="max_width_navigation flex">
+            <!-- making the logo -->
+            <a href="../html/index.html" class="logo_link"><img src="../images/Logo.png" alt="Loading image" class="logo"></a>
+
+            <!-- making the ul -->
+            <ul class="nav_list flex">
+                <li class="nav_li"><a href="../html/index.html" class="nav_link">Home</a></li>
+                <li class="nav_li"><a href="../html/about.html" class="nav_link">About Us</a></li>
+                <li class="nav_li"><a href="../html/services.html" class="nav_link">Services</a></li>
+                <li class="nav_li"><a href="../html/gallery.html" class="nav_link">Gallery</a></li>
+                <li class="nav_li"><a href="../html/contact.html" class="nav_link active">Contact Us</a></li>
+            </ul>
+
+            <!-- making the hamburger -->
+            <div id="hamburger" class="hamburger">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul id="mbl-menu" class="mobile_nav_list">
+                <li class="nav_li"><a href="../html/index.html" class="nav_link active">Home</a></li>
+                <li class="nav_li"><a href="../html/about.html" class="nav_link">About Us</a></li>
+                <li class="nav_li"><a href="../html/services.html" class="nav_link">Services</a></li>
+                <li class="nav_li"><a href="../html/gallery.html" class="nav_link">Gallery</a></li>
+                <li class="nav_li"><a href="../html/contact.html" class="nav_link active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- making the body -->
+    <div class="contact_content">
+        <div class="contact_wrapper">
+            <!-- making the form -->
+            <form class="contact_form flex" name="form">
+                <h2 class="form_heading">Contact Us</h2>
+                <input type="email" name="email" class="form_input" placeholder="Enter your email">
+                <input type="number" name="number" class="form_input" placeholder="Enter your number">
+                <div class="radio_container flex">
+                    <p class="form_radio">Male <input type="radio" value="Male" name="gender" class="radio_input"></p>
+                    <p class="form_radio" style="margin-left: 20px;">Female <input type="radio" value="Female" name="gender" class="radio_input"></p>
+                    <p class="form_radio" style="margin-left: 20px;">Other <input type="radio" value="Other" name="gender" class="radio_input"></p>
+                </div>
+                <textarea cols="30" rows="10" class="form_input textarea" placeholder="Send us your queries along with your names." name="message"></textarea>
+                <button class="submit" onclick="logAlert()">Submit</button>
+            </form>
+
+            <!-- including the image for the contact page -->
+        </div>
+    </div>
+
+    <!-- making the side profile -->
+    <div class="side_profile">
+        <div class="side_profile_nav">
+            <i class="fa fa-chevron-left"></i>
+        </div>
+        <div class="side_profile_tab">
+            <img src="../images/aboutimg.jpg" alt="image" class="side_img">
+            <p class="side_name">Eternal Moments</p>
+            <p class="side_desc">Hello! We are Eternal Moments Photography. Are you looking for professional photographers and videographers for your wedding? <b>You've come to the right place.</b></p>
+            <div class="side_social flex">
+                <table style="width: -webkit-fill-available;">
+                    <tr>
+                        <td>
+                            <a href="https://www.instagram.com" class="side_social_link" target="_blank"><i class="fa fa-instagram"></i></a>
+                        </td>
+                        <td>
+                            <a href="https://www.facebook.com" class="side_social_link" target="blank"><i class="fa fa-facebook"></i></a>
+                        </td>
+                        <td>
+                            <a href="" class="side_social_link"><i class="fa fa-twitter"></i></a>
+                        </td>
+                        <td>
+                            <a href="" class="side_social_link"><i class="fa fa-snapchat-ghost"></i></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+     <!-- making the footer -->
+     <footer>
+        This work belongs to Eternal Moments &copy; 2024. Place your queries at eternal123@gmail.com
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+<script>
+    function logAlert(){
+        var email = document.forms["form"]["email"].value;
+        var number = document.forms["form"]["number"].value;
+        var message = document.forms["form"]["message"].value;
+        var gender = document.forms["form"]["gender"].value;
+
+        if(email == "" || number == "" || message == "" || gender == ""){
+            alert("Empty field not allowed.");
+        }
+        else{
+            alert("Message send sucessfully");
+        }
+    }
+</script>
+</html>

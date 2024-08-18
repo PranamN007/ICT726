@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us-Eternal Moments Photography </title>
+
+    <!-- linking the favicon -->
+    <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
+
+    <!-- linking the xternal cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- linking with the external css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{
+            background: none;
+        }
+        
+        .about_content{
+            height: calc(100vh - 95px);
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow-x: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .about_content::before{
+            content: "";
+            background-image: url(../images/preview-18-1536x1025.jpg);
+            background-repeat: no-repeat;
+            position: absolute;
+            background-size: cover;
+            height: calc(100vh - 95px);
+            width: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- making the navigation -->
+    <nav class="navigation">
+        <div class="max_width_navigation flex">
+            <!-- making the logo -->
+            <a href="../html/index.html" class="logo_link"><img src="../images/Logo.png" alt="Loading image" class="logo"></a>
+
+            <!-- making the ul -->
+            <ul class="nav_list flex">
+                <li class="nav_li"><a href="../html/index.html" class="nav_link">Home</a></li>
+                <li class="nav_li"><a href="../html/about.html" class="nav_link active">About Us</a></li>
+                <li class="nav_li"><a href="../html/services.html" class="nav_link">Services</a></li>
+                <li class="nav_li"><a href="../html/gallery.html" class="nav_link">Gallery</a></li>
+                <li class="nav_li"><a href="../html/contact.html" class="nav_link">Contact Us</a></li>
+            </ul>
+
+            <!-- making the hamburger -->
+            <div id="hamburger" class="hamburger">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul id="mbl-menu" class="mobile_nav_list">
+                <li class="nav_li"><a href="../html/index.html" class="nav_link">Home</a></li>
+                <li class="nav_li"><a href="../html/about.html" class="nav_link active">About Us</a></li>
+                <li class="nav_li"><a href="../html/services.html" class="nav_link">Services</a></li>
+                <li class="nav_li"><a href="../html/gallery.html" class="nav_link">Gallery</a></li>
+                <li class="nav_li"><a href="../html/contact.html" class="nav_link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- making the body -->
+    <div class="about_content">
+        <div class="about_content_wrapper flex">
+            <div class="left_about flex">
+                <img src="../images/aboutimg960x960.png" alt="about_image" class="about_img">
+                <p class="about_name">Eternal Moments Photography</p>
+                <div class="about_social_link flex">
+                    <a href="https://www.instagram.com" class="social_link" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" class="social_link" target="blank"><i class="fa fa-facebook"></i></a>
+                    <a href="" class="social_link"><i class="fa fa-twitter"></i></a>
+                    <a href="" class="social_link"><i class="fa fa-snapchat-ghost"></i></a>
+                </div>
+            </div>
+            <div class="right_about flex">
+                <div class="first_page" id="first_page">
+                    <h2 class="first_page_h2">About Us</h2>
+                    <p class="first_page_p">Welcome to Eternal Moments Photography. We specialize in capturing the magic of your wedding day with stunning, timeless images. Our goal is to deliver exceptional service and preserve your cherished moments beautifully. <br><br>Our team specializes in creating timeless, beautiful images that tell your unique love story. We ensure every moment is captured with elegance and artistry.</p>
+                    <div class="navigator flex">
+                        <a href="#second_page" class="next_link"><i class="fa fa-chevron-right"></i></a>
+                        <a href="#third_page" class="previous_link"><i class="fa fa-chevron-left"></i></a>
+                    </div>
+                </div>
+                <div class="second_page" id="second_page">
+                    <h2 class="second_page_h2">What we offer?</h2>
+                    <p class="second_page_p">At Eternal Moments Photography, we offer elegant wedding photography that captures every moment with artistry and precision, from grand scenes to intimate details. Our customized packages are designed to meet your specific needs, ensuring a perfect fit for your special day. <br><br>We provide high-quality prints and beautifully crafted albums to preserve your memories for years to come.</p>
+                    <div class="navigator flex">
+                        <a href="#third_page" class="next_link"><i class="fa fa-chevron-right"></i></a>
+                        <a href="#first_page" class="previous_link"><i class="fa fa-chevron-left"></i></a>
+                    </div>
+                </div>
+                <div class="third_page" id="third_page">
+                    <h2 class="third_page_h2">Since 2010</h2>
+                    <p class="third_page_p">At Eternal Moments Photography, we have been capturing the magic of weddings since 2010. We specialize in elegant photography that beautifully documents every detail of your special day. Our services include customized packages, high-quality prints, and exquisite albums, all designed to fit your unique needs. With our personalized approach and dedicated team, we ensure your wedding memories are preserved in stunning images that you'll cherish forever.<br><br> People have been trusting us since 2010 with their beautiful moments to be captured. </p>
+                    <div class="navigator flex">
+                        <a href="#first_page" class="next_link"><i class="fa fa-chevron-right"></i></a>
+                        <a href="#second_page" class="previous_link"><i class="fa fa-chevron-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- making the footer -->
+     <footer>
+        This work belongs to Eternal Moments &copy; 2024. Place your queries at eternal123@gmail.com
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

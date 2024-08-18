@@ -1,0 +1,593 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* making the utility styles for the common tags */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right top, #a4b1c4, #91c3d6, #83d5d2, #99e3ba, #cfe99a);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* styling the navigation */
+.navigation{
+    background-color: whitesmoke;
+    padding: 10px;
+    border-bottom: 3px solid #ffa31a;
+    height: 65px;
+    justify-content: space-between;
+}
+
+.max_width_navigation{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    color: #181818;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.mobile_nav_list {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 65px;
+    max-width: 250px;
+    width: 0;
+    background-color: white !important;
+    height: 100%;
+    z-index: 10;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.mobile_nav_list.active {
+    width: 100%;
+}
+
+.mobile_nav_list a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+    background-color: whitesmoke;
+    border-bottom: 1px solid #ffa31a;
+}
+
+.nav_list{
+    list-style: none;
+}
+
+.logo{
+    height: 40px;
+}
+
+.nav_li{
+    padding: 4px 10px;
+}
+
+.nav_link{
+    text-decoration: none;
+    color: black;
+    padding: 5px 7px;
+}
+
+.nav_link:hover , .active{
+    color: black;
+    background-color: #ffa31a;
+    border-radius: 5px;
+}
+
+
+/* styling the contact page */
+.contact_wrapper{
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.form_heading{
+    color: black;
+    padding: 10px;
+    background-color: #ffa31a;
+    margin: -10px;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form_input{
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-bottom: 2px solid #ffa31a;
+    resize: none;
+    margin: 10px 0px;
+    background: none;
+    color: white;
+    font-size: 18px;
+}
+
+.radio_container{
+    margin: 10px 0px;
+}
+
+.form_input::placeholder{
+    color: lightgray;
+}
+
+.form_radio{
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.textarea{
+    border: 2px solid #ffa31a;
+}
+
+.contact_form{
+    flex-direction: column;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 2px 3px 15px;
+}
+
+.submit{
+    border: none;
+    outline: none;
+    color: black;
+    background-color: #ffa31a;
+    padding: 7px 17px;
+    font-size: 16px;
+    font-weight: 600;
+    width: fit-content;
+    margin: auto;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.submit:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+/* styling the about */
+.about_content_wrapper{
+    width: 700px;
+    height: 400px;
+    background-color: whitesmoke;
+    box-shadow: 5px 3px 15px;
+}
+
+.left_about , .right_about{
+    width: 50%;
+    height: 400px;
+    padding: 5px;
+    background-color: #eeeedc;
+    overflow-x: hidden;
+}
+
+.left_about{
+    background-color: #ece6f3;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-right: 2px solid rgb(196, 196, 196);
+}
+
+.about_img{
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.about_name{
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.about_social_link{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.social_link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fa{
+    font-size: 25px;
+    color: white;
+    border-radius: 7px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.fa-instagram{
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+
+.fa-facebook{
+    background-color: #3b5998;
+}
+
+.fa-twitter{
+    background-color: #1da1f2;
+}
+
+.fa-snapchat-ghost{
+    background-color: #fffc00;
+    -webkit-text-stroke: 2px black;
+}
+
+.first_page , .second_page, .third_page{
+    min-width: 350px;
+    height: 100%;
+    padding: 10px;
+}
+
+.navigator{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.next_link , .previous_link{
+    background-color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.next_link:hover , .previous_link:hover{
+    background-color: black;
+}
+
+.first_page_h2 , .second_page_h2, .third_page_h2{
+    margin-bottom: 10px;
+}
+
+.first_page_p{
+    color: rgb(82, 82, 82);
+    margin-bottom: 100px;
+    text-align: justify;
+}
+
+.second_page_p{
+    color: rgb(82, 82, 82);
+    text-align: justify;
+    margin-bottom: 82px;
+}
+
+.third_page_p{
+    color: rgb(82, 82, 82);
+    text-align: justify;
+    margin-bottom: 9px;
+}
+
+/* styling the gallery page */
+.first_gallery{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 300px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first_gallery::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/pier-one-sydney-wedding-1536x1025.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    z-index: -1;
+}
+
+.first_gallery_h2{
+    color: #ffa31a;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.first_gallery_p{
+    color: lightgray;
+    font-size: 20px;
+}
+
+.second_gallery{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    bottom: 90px;
+}
+
+.second_gallery_h2{
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+    width: 600px;
+    margin: auto;
+}
+
+.second_gallery_p{
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.youtube_video_link{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.second_para{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* styling the index page */
+.content{
+    align-items: center;
+    height: calc(100vh - 95px);
+    width: 1300px;
+    margin: auto;
+}
+
+.home_first{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    color: white;
+}
+
+.home_img{
+    width: 100%;
+    margin-bottom: 3px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+.home_first_para{
+    padding: 10px;
+}
+
+.home_second{
+    width: 70%;
+}
+
+.slider_container{
+    width: 750px;
+    overflow: hidden;
+    margin: auto;
+    border: 5px solid rgba(0, 0, 0, 8);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider_image_container{
+    min-width: 750px;
+    height: 400px;
+    overflow: hidden;
+    transition: 0.7s ease-in-out;
+}
+
+.slider_image{
+    width: 100%;
+    height: 100%;
+}
+
+/* styling the footer */
+footer{
+    background-color: black;
+    color: gray;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    height: 30px;
+}
+
+/* styling the research page */
+.research_content{
+    flex-direction: column;
+    max-width: 1300px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.upper{
+    justify-content: space-between;
+}
+
+.upper_left , .upper_right{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 640px;
+    border-radius: 10px;
+}
+
+.compare1 , .compare2{
+    width: 320px;
+    height: 190px;
+    border-radius: 10px 0px 0px 0px;
+}
+
+.compare2{
+    border-radius: 0px 10px 0px 0px;
+}
+
+.compare_para{
+    color: lightgray;
+    margin-top: 3px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.lower{
+    flex-direction: row-reverse;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.c1{
+    border-radius: 0px 10px 10px 0px;
+    width: 400px;
+    height: 230px;
+}
+
+.c2{
+    border-radius: 0px;
+    width: 400px;
+    height: 230px;
+}
+
+.cp1{
+    margin-right: 10px;
+}
+
+/* styling the side profile */
+.side_profile{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.side_profile_nav{
+    background-color: #181818;
+    width: 40px;
+    border-radius: 5px 0px 0px 5px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.side_profile_nav i{
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.side_profile_tab{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 10px;
+    position: absolute;
+    max-width: 300px;
+    min-width: 300px;
+    border-radius: 7px;
+    top: 50%;
+    right: 15px;
+    overflow: hidden;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.side_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ffa31a;
+    display: block;    
+    margin: auto;
+}
+
+.side_name{
+    font-size: 19px;
+    letter-spacing: 2px;
+    line-height: 2;
+    width: fit-content;
+    margin: auto;
+    font-weight: 600;
+    color: white;
+}
+
+.side_desc{
+    color: lightgray;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.side_social{
+    align-items: center;
+    justify-content: space-around;
+    max-width: 200px;
+    margin: auto;
+}
+
+.side_social_link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.side_social_link .fa{
+    font-size: 25px;
+    color: white;
+    border-radius: 7px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.side_profile:hover .side_profile_tab{
+    display: block;
+}
+
+.side_profile:hover .side_profile_nav{
+    display: none;
+}
+
+
+@media only screen and (max-width: 750px)  {
+    .nav_list {
+        display: none;
+    }
+    .hamburger {
+        display: inline-block;
+    }
+}
